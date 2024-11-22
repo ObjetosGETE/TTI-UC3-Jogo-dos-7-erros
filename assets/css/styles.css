@@ -1,0 +1,130 @@
+
+
+body {
+  display: flex;
+  justify-content: center;
+  font-optical-sizing: auto;
+  height: 1080px;
+  width: 1920px;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+
+}
+
+/**********************************************************/
+/*******************    tela capa   ***********************/
+/**********************************************************/
+
+.tela-capa {
+  background-image: url("../img/bg-capa.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 1080px;
+  width: 1920px;
+  text-align: center;
+  align-items: end;
+}
+
+.btn-iniciar {
+  width: 221px;
+  position: absolute;
+  bottom: 201px;
+  left: 853px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.btn-iniciar .iniciar-imagem {
+  transition: 0.3s;
+}
+
+.btn-iniciar:hover .iniciar-imagem {
+  content: url("../img/bt_iniciar_hv.png");
+}
+
+/**********************************************************/
+/****************** tela introducao  **********************/
+/**********************************************************/
+
+.tela-introducao {
+  background-image: url("../img/bg-intro.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 1080px;
+  width: 1920px;
+}
+
+.btn-jogar {
+  background-image: url("../img/quadrado-intro.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 330px;
+  height: 167px;
+  position: absolute;
+  top: 609px;
+  left: 925px;
+  background-color: #fff0;
+  border: none;
+  padding: 6px;
+  font-size: 2rem;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.btn-jogar:hover {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+/**********************************************************/
+/*********************   telas jogo  **********************/
+/**********************************************************/
+
+.custom-tooltip {
+  --bs-tooltip-bg: var(--bd-violet-bg);
+  --bs-tooltip-color: var(--bs-white);
+}
+
+/**********************************************************/
+/******************* vire o celular ***********************/
+/**********************************************************/
+
+.p-paisagem {
+  color: white;
+  text-align: center;
+}
+
+.img-paisagem {
+  max-width: 70% !important;
+  height: auto;
+  display: block;
+}
+
+.modo-smart {
+  display: none;
+}
+
+@media only screen and (orientation: portrait) {
+  .modo-smart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #5b2885;
+    z-index: 9999999999999999999;
+  }
+}
