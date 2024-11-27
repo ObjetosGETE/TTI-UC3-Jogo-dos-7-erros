@@ -1,16 +1,11 @@
-
-
-body {
-  display: flex;
-  justify-content: center;
-  font-optical-sizing: auto;
-  height: 1080px;
+.conteudo {
   width: 1920px;
-  flex-direction: column;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-
+  height: 1080px;
+  position: fixed;
+  left: calc(50% - 1920px / 2);
+  top: calc(50% - 1080px / 2);
+  margin: auto;
+  overflow: hidden;
 }
 
 /**********************************************************/
@@ -50,6 +45,19 @@ body {
 /****************** tela introducao  **********************/
 /**********************************************************/
 
+.bg-jogo {
+  background-image: url("../img/bg-jogo-em-andamento.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 1080px;
+  width: 1920px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
 .tela-introducao {
   background-image: url("../img/bg-intro.png");
   background-size: cover;
@@ -87,9 +95,73 @@ body {
 /*********************   telas jogo  **********************/
 /**********************************************************/
 
-.custom-tooltip {
-  --bs-tooltip-bg: var(--bd-violet-bg);
-  --bs-tooltip-color: var(--bs-white);
+.bg-jogo {
+  position: relative;
+}
+
+.div-cena {
+  position: absolute;
+  width: 1415px;
+}
+
+.img-peca {
+  margin: 0px;
+  padding: 0px;
+  border-radius: 0px 34px 34px 0px;
+}
+
+.img-fluid.img-cenario {
+  border-radius: 34px 0px 0px 34px;
+}
+
+.img-header {
+  width: 100% !important;
+}
+
+.div-texto {
+  margin: 0px;
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0px 34px 34px 0px;
+  text-align: left;
+}
+
+.p-texto {
+  padding: 20px;
+}
+
+.div-span {
+  margin-top: auto;
+  padding: 20px;
+}
+
+.btn-continuar {
+  background-color: #dee9f9;
+  width: 100%;
+  margin: 3px;
+  margin-bottom: 24px;
+  font-size: 2rem;
+  border-radius: 20px;
+  border: 1px solid #567194;
+  box-shadow: 5px 4px 1px #567194;
+  color: #567194;
+  transition: transform 0.2s ease;
+}
+
+.btn-continuar:hover {
+  transform: scale(0.95);
+  transform-origin: center center;
+}
+
+.escalar {
+  transform: scale(1.9); 
+  transition: transform 2s ease; 
 }
 
 /**********************************************************/
