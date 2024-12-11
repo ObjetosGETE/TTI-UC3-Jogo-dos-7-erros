@@ -110,6 +110,66 @@
   border-radius: 0px 34px 34px 0px;
 }
 
+.balao-conversa {
+  background-size: cover;
+  background-repeat: no-repeat;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: absolute;
+  padding-top: 13px;
+}
+
+.erro1 {
+  background-image: url("../img/balao_1.png");
+  top: 282px;
+  left: 345px;
+  width: 233px;
+  height: 102px;
+}
+
+.erro2 {
+  left: 42px;
+  top: 269px;
+  width: 368px;
+  height: 157px;
+}
+
+.btn-target {
+  position: absolute;
+  background-color: #fff0;
+  border: none;
+}
+
+button:focus {
+  outline: 1px dotted #fff0;
+}
+
+.btn-target .target-img {
+  transition: 0.3s;
+}
+
+.btn-target:hover .target-img {
+  content: url("../img/target.png");
+}
+
+.target1 {
+  top: 392px;
+  left: 256px;
+}
+
+.target2 {
+  top: 411px;
+  left: 5pc;
+}
+
+.transparente {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
 .img-fluid.img-cenario {
   border-radius: 34px 0px 0px 34px;
 }
@@ -160,8 +220,8 @@
 }
 
 .escalar {
-  transform: scale(1.9); 
-  transition: transform 2s ease; 
+  transform: scale(1.9);
+  transition: transform 2s ease;
 }
 
 /**********************************************************/
@@ -199,4 +259,64 @@
     background-color: #5b2885;
     z-index: 9999999999999999999;
   }
+}
+
+/**********************************************************/
+/******************* modal         ***********************/
+/**********************************************************/
+
+.introducao-modal {
+  background-color: #004788;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+}
+
+.introducao-slide {
+  text-align: center;
+  padding: 20px;
+}
+
+.introducao-titulo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.introducao-texto {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: #ffffff;
+}
+
+.introducao-titulo-secundario {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 20px;
+  color: #ffffff;
+}
+
+.btn-comecar-jogo {
+  background-color: #92acce;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 20px;
+  color: #004788;
+  border-radius: 5px;
+}
+
+.btn-comecar-jogo:hover {
+  background-color: #81a2bb;
+  color: #ffffff;
+}
+
+.carousel-indicators button {
+  background-color: #92acce;
+  border: none;
+}
+
+.carousel-indicators .active {
+  background-color: #004788;
 }

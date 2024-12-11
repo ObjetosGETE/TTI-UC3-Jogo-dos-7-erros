@@ -18,7 +18,7 @@
   <div class="conteudo">
     <div class="tela-capa">
       <button type="button" class="btn btn-iniciar"><img src="assets/img/bt_iniciar.png" alt="botão iniciar"
-          class="img-fluid iniciar-imagem"></button>
+          class="img-fluid iniciar-imagem"data-bs-toggle="modal" data-bs-target="#modalIntroducao"></button>
     </div>
     <div class="tela-introducao d-none">
       <button type="button" class="btn btn-jogar">Confira esse lindo imóvel</button>
@@ -27,14 +27,18 @@
     <div class="bg-jogo text-center d-none">
       <div class="tela-cozinha div-cena d-none row">
         <div class="col img-peca">
-          <img src="assets/img/cozinha.png" alt="imagem cozinha bagunçada" class="img-fluid img-cenario w-100">
+          <img src="assets/img/cozinha_baguncada.png" alt="imagem cozinha bagunçada" class="img-fluid img-cenario w-100">
+          <div class="balao-conversa erro1 transparente">
+            pia suja
+          </div>
+          <button type="button" class="btn btn-target target1"><img src="assets/img/target.png" alt="Botão sinalizador de erro" class="target-img img-fluid transparente"></button>
         </div>
         <div class="col div-texto">
-          <div class="span-header"><img src="assets/img/header-texto.png" class="img-fluid w-100"
-              alt="icones header rede social"></div>
-          <p class="p-texto">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod tempora nobis autem ducimus
-            id deleniti laboriosam, a corrupti asperiores explicabo ut similique voluptatem sit perspiciatis labore qui
-            delectus dolorum praesentium?
+          <div class="span-header"><img src="assets/img/header-texto.png" class="img-fluid w-100" alt="icones header rede social"></div>
+            <p class="p-texto">
+              A fotografia dessa cozinha contém alguns erros que podem ser corrigidos, 
+              tornando a apresentação do ambiente mais agradável aos que forem visualizá-la. 
+              <br><br> Encontre e clique nesses itens para consertar a imagem.
           </p>
           <div class="div-span w-100 row">
             <div class="col span-like"><img src="assets/img/coracao.png" alt="img-fluid" alt="icone like"></div>
@@ -43,20 +47,16 @@
             <div class="col-5"></div>
             <div class="col span-save"><img src="assets/img/salvar.png" alt="img-fluid" alt="icone salvar"></div>
           </div>
-          <button class="btn btn-continuar reparar1 w-100">Reparar</button>
+          <button class="btn btn-continuar reparar1 w-100 d-none">Reparar</button>
         </div>
       </div>
-
-
-
       <div class="tela-cozinha-pronta div-cena d-none row">
         <div class="col img-peca">
-          <img src="assets/img/cozinha.png" alt="imagem cozinha bagunçada" class="img-fluid img-cenario w-100">
+          <img src="assets/img/cozinha_arrumada.png" alt="imagem cozinha organizada" class="img-fluid img-cenario w-100">
         </div>
         <div class="col div-texto">
-          <div class="span-header"><img src="assets/img/header-texto.png" alt="img-fluid w-100"
-              alt="icones header rede social"></div>
-          <p class="p-texto">texto cozinha pronta</p>
+          <div class="span-header"><img src="assets/img/header-texto.png" alt="img-fluid w-100" alt="icones header rede social"></div>
+          <p class="p-texto">Mantenha o ambiente limpo e organizado. Não deixe sujeira nas fotos.</p>
           <div class="div-span w-100 row">
             <div class="col span-like1"><img src="assets/img/coracao.png" alt="img-fluid" alt="icone like"></div>
             <div class="col span-papo"><img src="assets/img/chat.png" alt="img-fluid" alt="icone comentário"></div>
@@ -67,111 +67,211 @@
           <button class="btn btn-continuar continua1 w-100">Continuar</button>
         </div>
       </div>
+
+            <!-- Cena da Sala -->
+      <div class="tela-sala div-cena d-none row">
+        <div class="col img-peca">
+          <img src="assets/img/sala_baguncada.png" alt="imagem sala bagunçada" class="img-fluid img-cenario w-100">
+          <div class="balao-conversa erro2 transparente">
+            almofadas fora do lugar
+          </div>
+          <button type="button" class="btn btn-target target2"><img src="assets/img/target.png" alt="Botão sinalizador de erro" class="target-img img-fluid transparente"></button>
+        </div>
+        <div class="col div-texto">
+          <div class="span-header"><img src="assets/img/header-texto.png" class="img-fluid w-100" alt="icones header rede social"></div>
+          <p class="p-texto">
+            A fotografia dessa sala contém alguns erros que podem ser corrigidos, 
+            tornando a apresentação do ambiente mais agradável aos que forem visualizá-la. 
+            <br><br> Encontre e clique nesses itens para consertar a imagem.
+          </p>
+          <div class="div-span w-100 row">
+            <div class="col span-like"><img src="assets/img/coracao.png" alt="icone like"></div>
+            <div class="col span-papo"><img src="assets/img/chat.png" alt="icone comentário"></div>
+            <div class="col span-direct"><img src="assets/img/direct.png" alt="icone direct"></div>
+            <div class="col-5"></div>
+            <div class="col span-save"><img src="assets/img/salvar.png" alt="icone salvar"></div>
+          </div>
+          <button class="btn btn-continuar reparar2 w-100 d-none">Reparar</button>
+        </div>
+      </div>
+
+      <div class="tela-sala-pronta div-cena d-none row">
+        <div class="col img-peca">
+          <img src="assets/img/sala_arrumada.png" alt="imagem sala arrumada" class="img-fluid img-cenario w-100">
+        </div>
+        <div class="col div-texto">
+          <div class="span-header"><img src="assets/img/header-texto.png" class="img-fluid w-100" alt="icones header rede social"></div>
+          <p class="p-texto">Ambientes organizados transmitem maior conforto visual. Lembre-se de alinhar objetos antes de fotografar.</p>
+          <div class="div-span w-100 row">
+            <div class="col span-like2"><img src="assets/img/coracao.png" alt="icone like"></div>
+            <div class="col span-papo"><img src="assets/img/chat.png" alt="icone comentário"></div>
+            <div class="col span-direct"><img src="assets/img/direct.png" alt="icone direct"></div>
+            <div class="col-5"></div>
+            <div class="col span-save2"><img src="assets/img/salvar.png" alt="icone salvar"></div>
+          </div>
+          <button class="btn btn-continuar continua2 w-100">Continuar</button>
+        </div>
+      </div>
+
+      <!-- Cena do Quarto -->
+      <div class="tela-quarto div-cena d-none row">
+        <div class="col img-peca">
+          <img src="assets/img/quarto_baguncado.png" alt="imagem quarto bagunçado" class="img-fluid img-cenario w-100">
+          <div class="balao-conversa erro3 transparente">
+            cama desarrumada
+          </div>
+          <button type="button" class="btn btn-target target3"><img src="assets/img/target.png" alt="Botão sinalizador de erro" class="target-img img-fluid transparente"></button>
+        </div>
+        <div class="col div-texto">
+          <div class="span-header"><img src="assets/img/header-texto.png" class="img-fluid w-100" alt="icones header rede social"></div>
+          <p class="p-texto">
+            A fotografia desse quarto contém alguns erros que podem ser corrigidos, 
+            tornando a apresentação do ambiente mais agradável aos que forem visualizá-la. 
+            <br><br> Encontre e clique nesses itens para consertar a imagem.
+          </p>
+          <div class="div-span w-100 row">
+            <div class="col span-like"><img src="assets/img/coracao.png" alt="icone like"></div>
+            <div class="col span-papo"><img src="assets/img/chat.png" alt="icone comentário"></div>
+            <div class="col span-direct"><img src="assets/img/direct.png" alt="icone direct"></div>
+            <div class="col-5"></div>
+            <div class="col span-save"><img src="assets/img/salvar.png" alt="icone salvar"></div>
+          </div>
+          <button class="btn btn-continuar reparar3 w-100 d-none">Reparar</button>
+        </div>
+      </div>
+
+      <div class="tela-quarto-pronta div-cena d-none row">
+        <div class="col img-peca">
+          <img src="assets/img/quarto_arrumado.png" alt="imagem quarto arrumado" class="img-fluid img-cenario w-100">
+        </div>
+        <div class="col div-texto">
+          <div class="span-header"><img src="assets/img/header-texto.png" class="img-fluid w-100" alt="icones header rede social"></div>
+          <p class="p-texto">Mantenha o ambiente organizado. Uma cama bem arrumada valoriza o quarto nas fotos.</p>
+          <div class="div-span w-100 row">
+            <div class="col span-like3"><img src="assets/img/coracao.png" alt="icone like"></div>
+            <div class="col span-papo"><img src="assets/img/chat.png" alt="icone comentário"></div>
+            <div class="col span-direct"><img src="assets/img/direct.png" alt="icone direct"></div>
+            <div class="col-5"></div>
+            <div class="col span-save3"><img src="assets/img/salvar.png" alt="icone salvar"></div>
+          </div>
+          <button class="btn btn-continuar continua3 w-100">Continuar</button>
+        </div>
+      </div>
+
     </div>
   </div>
-
 
   <div class="modal fade" id="modalIntroducao" tabindex="-1" aria-labelledby="modalIntroducaoLabel" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content">
+      <div class="modal-content introducao-modal">
         <div class="modal-header">
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <div class="modal-intro d-none">
-            <div id="carouselIntroducao" class="carousel slide">
-              <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselIntroducao" data-bs-slide-to="0" class="active"
-                  aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselIntroducao" data-bs-slide-to="1"
-                  aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselIntroducao" data-bs-slide-to="2"
-                  aria-label="Slide 3"></button>
-              </div>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <p class="d-block p-intro">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus earum
-                    officia eius repellat qui, ipsa sed error hic asperiores sunt doloremque, aut eligendi repellendus
-                    totam voluptatibus ea perferendis? Fugit, rerum.</p>
-                </div>
-                <div class="carousel-item">
-                  <p class="d-block p-intro">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus earum
-                    officia eius repellat qui, ipsa sed error hic asperiores sunt doloremque, aut eligendi repellendus
-                    totam voluptatibus ea perferendis? Fugit, rerum.</p>
-                </div>
-                <div class="carousel-item">
-                  <p class="d-block p-intro">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus earum
-                    officia eius repellat qui, ipsa sed error hic asperiores sunt doloremque, aut eligendi repellendus
-                    totam voluptatibus ea perferendis? Fugit, rerum.</p>
-                </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselIntroducao"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Próximo</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselIntroducao"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterio</span>
-              </button>
+          <div id="carouselIntroducao" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselIntroducao" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselIntroducao" data-bs-slide-to="1" aria-label="Slide 2"></button>
             </div>
+            <div class="carousel-inner">
+              <!-- Slide 1 -->
+              <div class="carousel-item active">
+                <div class="introducao-slide">
+                  <h1 class="introducao-titulo">Esse é um jogo dos sete erros diferente!</h1>
+                  <p class="introducao-texto">
+                    Agora que já conhecemos a importância da fotografia para anúncios de imóveis,
+                    vamos identificar algumas situações que não estão considerando algumas
+                    das dicas essenciais para produzir fotos.
+                  </p>
+                </div>
+              </div>
+              <!-- Slide 2 -->
+              <div class="carousel-item">
+                <div class="introducao-slide">
+                  <p class="introducao-texto">
+                    Você visualizará algumas imagens representando fotografias de imóveis.
+                    Ao identificar algo que não está de acordo com as orientações para fotografar ambientes,
+                    <strong>clique sobre o item</strong> para corrigir e deixar a imagem de acordo com o que estudamos nesse material.
+                  </p>
+                  <p class="introducao-titulo-secundario">
+                    São 3 fotos e 7 erros no total. Vamos lá?
+                  </p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselIntroducao" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselIntroducao" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Próximo</span>
+            </button>
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary btn-comecar-jogo" data-bs-dismiss="modal">Começar o jogo</button>
         </div>
       </div>
     </div>
   </div>
+  
 
-  <div class="modal fade" id="modalFinal" tabindex="-1" aria-labelledby="modalFinalLabel" aria-hidden="true">
+  <div class="modal fade" id="modalIntroducao" tabindex="-1" aria-labelledby="modalIntroducaoLabel" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content">
+      <div class="modal-content introducao-modal">
         <div class="modal-header">
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <div class="modal-final d-none">
-            <div id="carouselFinal" class="carousel slide">
-              <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselFinal" data-bs-slide-to="0" class="active"
-                  aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselFinal" data-bs-slide-to="1"
-                  aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselFinal" data-bs-slide-to="2"
-                  aria-label="Slide 3"></button>
-              </div>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <p class="d-block p-final">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus earum
-                    officia eius repellat qui, ipsa sed error hic asperiores sunt doloremque, aut eligendi repellendus
-                    totam voluptatibus ea perferendis? Fugit, rerum.</p>
-                </div>
-                <div class="carousel-item">
-                  <p class="d-block p-final">Fechar aplicativo</p>
-                  <button type="button" class="btn btn-primary btn-recomecar">Recomeçar</button>
-                  <button type="button" class="btn btn-primary btn-fechar">Fechar</button>
-                </div>
-
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselFinal" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Próximo</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselFinal" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterio</span>
-              </button>
+          <div id="carouselIntroducao" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselIntroducao" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselIntroducao" data-bs-slide-to="1" aria-label="Slide 2"></button>
             </div>
+            <div class="carousel-inner">
+              <!-- Slide 1 -->
+              <div class="carousel-item active">
+                <div class="introducao-slide">
+                  <h1 class="introducao-titulo">Esse é um jogo dos sete erros diferente!</h1>
+                  <p class="introducao-texto">
+                    Agora que já conhecemos a importância da fotografia para anúncios de imóveis,
+                    vamos identificar algumas situações que não estão considerando algumas
+                    das dicas essenciais para produzir fotos.
+                  </p>
+                </div>
+              </div>
+              <!-- Slide 2 -->
+              <div class="carousel-item">
+                <div class="introducao-slide">
+                  <p class="introducao-texto">
+                    Você visualizará algumas imagens representando fotografias de imóveis.
+                    Ao identificar algo que não está de acordo com as orientações para fotografar ambientes,
+                    <strong>clique sobre o item</strong> para corrigir e deixar a imagem de acordo com o que estudamos nesse material.
+                  </p>
+                  <p class="introducao-titulo-secundario">
+                    São 3 fotos e 7 erros no total. Vamos lá?
+                  </p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselIntroducao" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselIntroducao" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Próximo</span>
+            </button>
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary btn-comecar-jogo" data-bs-dismiss="modal">Começar o jogo</button>
         </div>
       </div>
     </div>
   </div>
+  
 
   <div class="modo-smart">
     <div class="text-center">
@@ -185,20 +285,16 @@
 
 
 
-  <audio id="audio-acerto">
-    <source src="assets/audio/acerto.mp3" type="audio/mpeg">
-  </audio>
-
-  <audio id="audio-errado">
-    <source src="assets/audio/erro.mp3" type="audio/mpeg">
-  </audio>
-
   <audio id="audio-clique">
     <source src="assets/audio/clique.mp3" type="audio/mpeg">
   </audio>
 
   <audio id="audio-like">
     <source src="assets/audio/like.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio id="audio-salvar">
+    <source src="assets/audio/sino.mp3" type="audio/mpeg">
   </audio>
 
 
