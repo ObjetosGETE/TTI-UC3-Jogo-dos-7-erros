@@ -31,7 +31,11 @@
           <div class="balao-conversa erro1 transparente">
             pia suja
           </div>
+          <div class="balao-conversa erro1a transparente">
+           Lixo Espalhado
+          </div>
           <button type="button" class="btn btn-target target1"><img src="assets/img/target.png" alt="Botão sinalizador de erro" class="target-img img-fluid transparente"></button>
+          <button type="button" class="btn btn-target target1a"><img src="assets/img/target.png" alt="Botão sinalizador de erro" class="target-img img-fluid transparente"></button>
         </div>
         <div class="col div-texto">
           <div class="span-header"><img src="assets/img/header-texto.png" class="img-fluid w-100" alt="icones header rede social"></div>
@@ -56,6 +60,7 @@
         </div>
         <div class="col div-texto">
           <div class="span-header"><img src="assets/img/header-texto.png" alt="img-fluid w-100" alt="icones header rede social"></div>
+          <p class="p-texto">Mantenha o local limpo, remova todos os lixos no ambiente. </p>
           <p class="p-texto">Mantenha o ambiente limpo e organizado. Não deixe sujeira nas fotos.</p>
           <div class="div-span w-100 row">
             <div class="col span-like1"><img src="assets/img/coracao.png" alt="img-fluid" alt="icone like"></div>
@@ -73,9 +78,17 @@
         <div class="col img-peca">
           <img src="assets/img/sala_baguncada.png" alt="imagem sala bagunçada" class="img-fluid img-cenario w-100">
           <div class="balao-conversa erro2 transparente">
-            almofadas fora do lugar
+            Roupas espalhadas 
+          </div>
+          <div class="balao-conversa erro2a transparente">
+            Janela fechada e luz apagada
+          </div>
+          <div class="balao-conversa erro2b transparente">
+            Pessoa sentada 
           </div>
           <button type="button" class="btn btn-target target2"><img src="assets/img/target.png" alt="Botão sinalizador de erro" class="target-img img-fluid transparente"></button>
+          <button type="button" class="btn btn-target target2a"><img src="assets/img/target.png" alt="Botão sinalizador de erro" class="target-img img-fluid transparente"></button>
+          <button type="button" class="btn btn-target target2b"><img src="assets/img/target.png" alt="Botão sinalizador de erro" class="target-img img-fluid transparente"></button>
         </div>
         <div class="col div-texto">
           <div class="span-header"><img src="assets/img/header-texto.png" class="img-fluid w-100" alt="icones header rede social"></div>
@@ -101,7 +114,9 @@
         </div>
         <div class="col div-texto">
           <div class="span-header"><img src="assets/img/header-texto.png" class="img-fluid w-100" alt="icones header rede social"></div>
-          <p class="p-texto">Ambientes organizados transmitem maior conforto visual. Lembre-se de alinhar objetos antes de fotografar.</p>
+          <p class="p-texto">Não deixe objetos fora do lugar. Guarde todo que não pertence ao ambiente. </p>
+          <p class="p-texto">Deixei o ambiente bem iluminado. Ligue uma luz, abra uma janela.</p>
+          <p class="p-texto">Fotos somente do ambiente. Não deixe pessoas atrapalharem na imagem.</p>
           <div class="div-span w-100 row">
             <div class="col span-like2"><img src="assets/img/coracao.png" alt="icone like"></div>
             <div class="col span-papo"><img src="assets/img/chat.png" alt="icone comentário"></div>
@@ -118,9 +133,13 @@
         <div class="col img-peca">
           <img src="assets/img/quarto_baguncado.png" alt="imagem quarto bagunçado" class="img-fluid img-cenario w-100">
           <div class="balao-conversa erro3 transparente">
-            cama desarrumada
+            Armário aberto
+          </div>
+          <div class="balao-conversa erro3a transparente">
+            Foto desnivelada do chão
           </div>
           <button type="button" class="btn btn-target target3"><img src="assets/img/target.png" alt="Botão sinalizador de erro" class="target-img img-fluid transparente"></button>
+          <button type="button" class="btn btn-target target3a"><img src="assets/img/target.png" alt="Botão sinalizador de erro" class="target-img img-fluid transparente"></button>
         </div>
         <div class="col div-texto">
           <div class="span-header"><img src="assets/img/header-texto.png" class="img-fluid w-100" alt="icones header rede social"></div>
@@ -146,7 +165,8 @@
         </div>
         <div class="col div-texto">
           <div class="span-header"><img src="assets/img/header-texto.png" class="img-fluid w-100" alt="icones header rede social"></div>
-          <p class="p-texto">Mantenha o ambiente organizado. Uma cama bem arrumada valoriza o quarto nas fotos.</p>
+          <p class="p-texto">Mantenha a organização dos moveis, como os roupeiros fechados.</p>
+          <p class="p-texto">Enquadre corretamente o ambiente a foto. Ajuste o angulo da imagem para se adequar ao nível do chão.</p>
           <div class="div-span w-100 row">
             <div class="col span-like3"><img src="assets/img/coracao.png" alt="icone like"></div>
             <div class="col span-papo"><img src="assets/img/chat.png" alt="icone comentário"></div>
@@ -164,19 +184,27 @@
   <div class="modal fade" id="modalIntroducao" tabindex="-1" aria-labelledby="modalIntroducaoLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content introducao-modal">
-        <div class="modal-header">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
+        
+        <button class="carousel-control-prev" id="prev-slide" type="button">
+          <div class="bolinha"><span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </div>
+        </button>
+        <button class="carousel-control-next" id="next-slide" type="button">
+          <div class="bolinha"><span class="carousel-control-next-icon" aria-hidden="true"></span></div>
+       
+        </button>
+  
+        <div class="modal-body modal-body">
           <div id="carouselIntroducao" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselIntroducao" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselIntroducao" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <div class="carousel-inner">
+              <button type="button" class="carousel-indicator active" data-bs-target="#carouselIntroducao" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" class="carousel-indicator" data-bs-target="#carouselIntroducao" data-bs-slide-to="1" aria-label="Slide 2"></button>
             </div>
+  
             <div class="carousel-inner">
               <!-- Slide 1 -->
               <div class="carousel-item active">
-                <div class="introducao-slide">
+                <div class="introducao-slide text-center">
                   <h1 class="introducao-titulo">Esse é um jogo dos sete erros diferente!</h1>
                   <p class="introducao-texto">
                     Agora que já conhecemos a importância da fotografia para anúncios de imóveis,
@@ -184,89 +212,55 @@
                     das dicas essenciais para produzir fotos.
                   </p>
                 </div>
+                <div class="indicador"><span>...</span></div>
               </div>
-              <!-- Slide 2 -->
+          
               <div class="carousel-item">
-                <div class="introducao-slide">
-                  <p class="introducao-texto">
+                <div class="introducao-slide text-center">
+                  <p class="introducao-texto slide2">
                     Você visualizará algumas imagens representando fotografias de imóveis.
                     Ao identificar algo que não está de acordo com as orientações para fotografar ambientes,
                     <strong>clique sobre o item</strong> para corrigir e deixar a imagem de acordo com o que estudamos nesse material.
                   </p>
-                  <p class="introducao-titulo-secundario">
-                    São 3 fotos e 7 erros no total. Vamos lá?
-                  </p>
                 </div>
               </div>
+
+                <div class="carousel-item">
+                  <div class="introducao-slide text-center introducao-slide-scrollable">
+                    <p class="introducao-texto">
+                      Além disso, lembre-se de que as fotografias podem fazer toda a diferença
+                      na percepção de um ambiente. Pequenos ajustes no enquadramento,
+                      iluminação e organização podem transformar completamente a forma como
+                      os imóveis são apresentados aos clientes. Esteja atento aos detalhes e
+                      garanta que cada fotografia transmita uma mensagem clara e positiva.
+                    </p>
+                    <p class="introducao-titulo-secundario">
+                      São 3 fotos e 7 erros no total. Vamos lá?
+                    </p>
+                    <button type="button" class="btn btn-primary btn-comecar-jogo" data-dismiss="modal">Começar o jogo</button>
+                  </div>
+                </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselIntroducao" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselIntroducao" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Próximo</span>
-            </button>
           </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary btn-comecar-jogo" data-bs-dismiss="modal">Começar o jogo</button>
         </div>
       </div>
     </div>
   </div>
   
-
-  <div class="modal fade" id="modalIntroducao" tabindex="-1" aria-labelledby="modalIntroducaoLabel" aria-hidden="true">
+  <div class="modal fade" id="modalFinal" tabindex="-1" aria-labelledby="modalFinalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content introducao-modal">
-        <div class="modal-header">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
         <div class="modal-body">
-          <div id="carouselIntroducao" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselIntroducao" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselIntroducao" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            </div>
-            <div class="carousel-inner">
-              <!-- Slide 1 -->
-              <div class="carousel-item active">
-                <div class="introducao-slide">
-                  <h1 class="introducao-titulo">Esse é um jogo dos sete erros diferente!</h1>
-                  <p class="introducao-texto">
-                    Agora que já conhecemos a importância da fotografia para anúncios de imóveis,
-                    vamos identificar algumas situações que não estão considerando algumas
-                    das dicas essenciais para produzir fotos.
-                  </p>
-                </div>
-              </div>
-              <!-- Slide 2 -->
-              <div class="carousel-item">
-                <div class="introducao-slide">
-                  <p class="introducao-texto">
-                    Você visualizará algumas imagens representando fotografias de imóveis.
-                    Ao identificar algo que não está de acordo com as orientações para fotografar ambientes,
-                    <strong>clique sobre o item</strong> para corrigir e deixar a imagem de acordo com o que estudamos nesse material.
-                  </p>
-                  <p class="introducao-titulo-secundario">
-                    São 3 fotos e 7 erros no total. Vamos lá?
-                  </p>
-                </div>
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselIntroducao" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselIntroducao" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Próximo</span>
-            </button>
+          <div class="introducao-slide text-center">
+            <h1 class="final-titulo">Parabéns!</h1>
+            <p class="final-texto">
+              Agora você é expert em anúncios imobiliários!
+              Entende a importância de um ambiente limpo e organizado
+              para as fotografias, os benefícios e resultados que trarão!
+            </p>
+            <button type="button" class="btn btn-recomecar">Recomeçar</button>
+          <button type="button" class="btn fechar-final" data-bs-dismiss="modal">Fechar</button>
           </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary btn-comecar-jogo" data-bs-dismiss="modal">Começar o jogo</button>
         </div>
       </div>
     </div>
@@ -301,7 +295,6 @@
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="assets/js/config.js"></script>
   <script src="assets/js/script.js"></script>
 </body>
 
