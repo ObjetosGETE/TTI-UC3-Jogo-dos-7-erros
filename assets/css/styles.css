@@ -98,9 +98,11 @@ body {
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.1);
   }
+
   100% {
     transform: scale(1);
   }
@@ -154,7 +156,7 @@ body {
   background-image: url("../img/balao_2.png");
   width: 233px;
   height: 102px;
-  top: 309px;
+  top: 265px;
   left: 349px;
 }
 
@@ -185,7 +187,7 @@ body {
 .erro3 {
   background-image: url("../img/balao_2.png");
   left: 48px;
-  top: 170px;
+  top: 118px;
   width: 195px;
   height: 83px;
 }
@@ -204,8 +206,9 @@ body {
 }
 
 .target1a {
-  top: 424px;
-  left: 486px;
+  top: 329px;
+  left: 431px;
+  padding: 59px;
 }
 
 .target2a {
@@ -219,8 +222,8 @@ body {
 }
 
 .target2a {
-  top: 179px;
-  left: 193px;
+  top: 83px;
+  left: 87px;
 }
 
 .target2b {
@@ -229,8 +232,9 @@ body {
 }
 
 .target3 {
-  top: 258px;
-  left: 166px;
+  top: 122px;
+  left: 81px;
+  padding: 103px;
 }
 
 .target3a {
@@ -244,8 +248,8 @@ body {
   border: none;
 }
 
-button:focus {
-  outline: 1px dotted #fff0;
+.btn.btn-target.target2a {
+  padding: 79px;
 }
 
 .btn-target .target-img {
@@ -563,4 +567,11 @@ button:focus {
 .fechar-final:hover {
   background-color: #81a2bb;
   color: #ffffff;
+}
+
+button:focus,
+button:active {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none;
 }
