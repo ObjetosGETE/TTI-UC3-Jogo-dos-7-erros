@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  
   $(".btn-iniciar").on("click", function () {
     $("#modalIntroducao").modal("show");
   });
@@ -8,7 +9,7 @@ $(document).ready(function () {
   });
 
   $(".btn-recomecar").on("click", function () {
-    resetGame();
+    location.reload();
   });
 
   trocarImagem();
@@ -17,7 +18,6 @@ $(document).ready(function () {
   trocarImagem();
   somDeClique();
   showSlide(currentSlide);
-
   $(window).on("resize", resizeBodyConteudo);
 });
 
@@ -33,17 +33,46 @@ function controleBotoes() {
     $(".tela-cozinha").removeClass("d-none");
   });
 
+  botoesTelaUm();
+  botoesTelaDois();
+  botoesTelaTres();
+
+  $(".btn-comecar-jogo").on("click", function () {
+    $("#modalIntroducao").modal("hide");
+  });
+
+  $(".fechar-final").on("click", function () {
+    $("#modalFinal").modal("hide");
+    $(".tela-quarto-pronta").addClass("d-none");
+    $(".tela-cozinha").removeClass("d-none");
+  });
+
+}
+
+
+function botoesTelaUm() {
+  let target1Clicked = false;
+  let target1aClicked = false;
+
   $(".target1").on("click", function () {
     $(this).find("img").removeClass("transparente");
     $(".erro1").removeClass("transparente");
-    $(".reparar1").removeClass("d-none");
+    target1Clicked = true;
+    checkReparar1();
   });
 
   $(".target1a").on("click", function () {
     $(this).find("img").removeClass("transparente");
     $(".erro1a").removeClass("transparente");
-    $(".reparar1a").removeClass("d-none");
+    target1aClicked = true;
+    checkReparar1();
   });
+
+  function checkReparar1() {
+    if (target1Clicked && target1aClicked) {
+      $(".reparar1").removeClass("d-none");
+    }
+  }
 
   $(".reparar1").on("click", function () {
     $(".tela-cozinha").addClass("d-none");
@@ -55,24 +84,39 @@ function controleBotoes() {
     $(".tela-cozinha-pronta").addClass("d-none");
     $(".tela-sala").removeClass("d-none");
   });
+}
+
+function botoesTelaDois() {
+  let target2Clicked = false;
+  let target2aClicked = false;
+  let target2bClicked = false;
 
   $(".target2").on("click", function () {
     $(this).find("img").removeClass("transparente");
     $(".erro2").removeClass("transparente");
-    $(".reparar2").removeClass("d-none");
+    target2Clicked = true;
+    checkReparar2();
   });
 
   $(".target2a").on("click", function () {
     $(this).find("img").removeClass("transparente");
     $(".erro2a").removeClass("transparente");
-    $(".reparar2a").removeClass("d-none");
+    target2aClicked = true;
+    checkReparar2();
   });
 
   $(".target2b").on("click", function () {
     $(this).find("img").removeClass("transparente");
     $(".erro2b").removeClass("transparente");
-    $(".reparar2b").removeClass("d-none");
+    target2bClicked = true;
+    checkReparar2();
   });
+
+  function checkReparar2() {
+    if (target2Clicked && target2aClicked && target2bClicked) {
+      $(".reparar2").removeClass("d-none");
+    }
+  }
 
   $(".reparar2").on("click", function () {
     $(".tela-sala").addClass("d-none");
@@ -84,18 +128,32 @@ function controleBotoes() {
     $(".tela-sala-pronta").addClass("d-none");
     $(".tela-quarto").removeClass("d-none");
   });
+}
+
+function botoesTelaTres() {
+  let target3Clicked = false;
+  let target3aClicked = false;
+
 
   $(".target3").on("click", function () {
     $(this).find("img").removeClass("transparente");
     $(".erro3").removeClass("transparente");
-    $(".reparar3").removeClass("d-none");
+    target3Clicked = true;
+    checkReparar3();
   });
 
   $(".target3a").on("click", function () {
     $(this).find("img").removeClass("transparente");
     $(".erro3a").removeClass("transparente");
-    $(".reparar3a").removeClass("d-none");
+    target3aClicked = true;
+    checkReparar3();
   });
+
+  function checkReparar3() {
+    if (target3Clicked && target3aClicked) {
+      $(".reparar3").removeClass("d-none");
+    }
+  }
 
   $(".reparar3").on("click", function () {
     $(".tela-quarto").addClass("d-none");
@@ -263,43 +321,3 @@ $("#next-slide").on("click", function () {
 $("#prev-slide").on("click", function () {
   showSlide(currentSlide - 1);
 });
-
-$(".btn-comecar-jogo").on("click", function () {
-  $("#modalIntroducao").modal("hide");
-});
-
-$(".fechar-final").on("click", function () {
-  $("#modalFinal").modal("hide");
-  $(".tela-quarto-pronta").addClass("d-none");
-  $(".tela-cozinha").removeClass("d-none");
-});
-
-
-function resetGame() {
-  $(".div-cena").addClass("d-none");
-
-  $(".tela-capa").removeClass("d-none");
-
-  $(".transparente").addClass("transparente");
-  $(".reparar1, .reparar2, .reparar3").addClass("d-none");
-  $(".continua1, .continua2, .continua3").addClass("d-none");
-  $(".tela-cozinha, .tela-sala, .tela-quarto").addClass("d-none");
-  $(".tela-cozinha-pronta, .tela-sala-pronta, .tela-quarto-pronta").addClass("d-none");
-  $(
-    ".target1 img, .target1a img, .target2 img, .target2a img, .target2b img, .target3 img, .target3a img"
-  ).addClass("transparente");
-  $(".erro1, .erro1a, .erro2, .erro2a, .erro2b, .erro3, .erro3a").addClass("transparente");
-  $("#modalFinal").modal("hide");
-
-  resetAnimations();
-}
-
-function resetAnimations() {
-  $(".span-like1 img, .span-like2 img, .span-like3 img")
-    .attr("src", "assets/img/coracao.png")
-    .removeClass("escalar");
-
-  $(".span-save1 img, .span-save2 img, .span-save3 img")
-    .attr("src", "assets/img/salvar.png")
-    .removeClass("escalar");
-}
